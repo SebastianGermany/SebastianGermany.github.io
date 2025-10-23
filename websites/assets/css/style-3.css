@@ -1,0 +1,75 @@
+/*  ============= WEB BROWSER RESETS ============ */
+* { margin: 0; padding: 0; border: none }
+*, *::before, *::after { box-sizing: border-box }
+html { height: 100%; font-size: 100%; font: inherit; vertical-align: baseline;
+  scroll-behavior: smooth; scroll-padding-top: 20px }
+body { line-height: 1.5; min-height: 100vh }
+img { width: 100%; height: auto }
+@media (max-width: 767px ) { body { text-rendering: optimizeSpeed } }
+@media (min-width: 768px ) { body { text-rendering: optimizeLegibility } }
+
+/* ============ CUSTOM PROPERTIES ============  */
+:root{
+  --font-sans:-apple-system,system-ui,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Fira Sans,Ubuntu,Oxygen,Oxygen Sans,Cantarell,Droid Sans,Apple Color Emoji,Segoe UI Emoji,Segoe UI Emoji,Segoe UI Symbol,Lucida Grande,Helvetica,Arial,sans-serif;
+  --font-serif:Cambria,"Hoefler Text",Utopia,"Liberation Serif","Nimbus Roman No9 L Regular",Times,"Times New Roman",serif;
+  --fs-sm:clamp(0.8rem,0.17vi + 0.76rem,0.89rem);
+  --fs-base:clamp(1rem,0.34vi + 0.91rem,1.19rem);
+  --fs-xl:clamp(1.95rem,1.56vi + 1.56rem,2.81rem);
+  --fs-xxxl:clamp(3.05rem,3.54vi + 2.17rem,5rem);
+
+  /* palette used for the screenshot */
+  --cream: #FEF3C7;   /* amber-100 */
+  --mint:  #C6F6D5;   /* green-200 */
+  --pale-blue:#BAE6FD;/* sky-200 */
+  --navy:  #1E3A8A;   /* blue-900 */
+  --salmon:#FDD0BB;   /* trend-100 */
+  --ink:   #0C1432;   /* text on light */
+  --ink-soft:#0369A1; /* paragraph tint */
+  --white: #ffffff;
+}
+
+/*  ============== LAYOUT FOR CONTENT CONTAINERS ================= */
+nav, header, section, footer { position: relative; display: block }
+header, section, footer { margin-left: auto; margin-right: auto; overflow: hidden }
+section > *:last-child { margin-bottom: 0 !important }
+
+/*  ====================== SECTIONS ======================== */
+@media (min-width: 768px) { section { padding: 3% 20% } }
+@media (max-width: 767px) { section { padding: 0 5% 5% 5% } }
+
+section { max-width: 1920px }
+section > * { max-width: 1600px; margin-left: auto; margin-right: auto }
+
+/* ============= TYPOGRAPHY ============ */
+body { background-color: #BFDBFE; font-family: var(--font-serif) } /* blue-200 page bg */
+h2{
+  font-size: var(--fs-xl);
+  line-height: 1.2;
+  margin-bottom: 6px;
+  color: #1E40AF; /* blue-800 */
+  font-weight: 700;
+}
+p{
+  font-size: var(--fs-base);
+  line-height: 1.7;
+  margin-bottom: 12px;
+  color: var(--ink-soft);
+}
+a{ text-decoration: underline }
+
+/* ====== COLOUR BANDS (1..6) ====== */
+section:nth-of-type(1){ background: var(--cream); }
+section:nth-of-type(2){ background: var(--mint); }
+section:nth-of-type(3){ background: var(--pale-blue); }
+
+/* Dark navy band with white text/links */
+section:nth-of-type(4){
+  background: var(--navy);
+  color: var(--white);
+}
+section:nth-of-type(4) h2,
+section:nth-of-type(4) p,
+section:nth-of-type(4) a{ color: var(--white); }
+
+section:nth-of-type(5){ background: var(--salmon); }
+section:nth-of-type(6){ background: var(--cream); }
